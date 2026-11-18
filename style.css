@@ -1,0 +1,103 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f4ef;
+  --ink: #1c1915;
+  --muted: #5e564c;
+  --line: #ddd6c8;
+  --link: #0c4a6e;
+  --card: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 "Segoe UI", system-ui, sans-serif;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+header,
+main,
+footer {
+  width: min(42rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0;
+  font-weight: 650;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: inherit;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.lede,
+.note {
+  color: var(--muted);
+}
+
+section,
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.25rem 1.25rem 1rem;
+  margin-top: 1.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+footer {
+  padding: 0 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 36rem) {
+  header {
+    flex-direction: column;
+  }
+}
